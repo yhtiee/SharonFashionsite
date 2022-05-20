@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+</head>
+<style> 
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    div{
+        height: 500px;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 100px; 
+        transition: 0.8s; 
+    }
+    div:hover{
+        border-radius: 20px;
+            box-shadow: 0px 0px 12px 1px grey;
+    }
+    h1{
+        text-align: center;
+        
+    }
+    article{
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 30px;
+        
+       
+    }
+    div{
+        background-color: white;
+        color: black;
+    }
+    article{
+        border: 1px solid black;
+        background-color: black;
+        color: white;
+    }
+    p{
+        margin-left: 20px;
+        font-weight: bolder;
+    }
+    input{
+        width: 80%;
+        height: 20px;
+    }
+    button{
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 30px;
+        width: 50%;
+        height: 50px;
+        font-size: larger;
+        font-weight: bolder;
+        border: 0px;
+        color: white;
+        background-color: black;
+    }
+    button:hover{
+        background-color: rgba(0,0,0,0.8);
+    }
+    @media (max-width: 900px){
+         div{
+             margin-right:1.5px;
+             margin-left: 1.5px;
+         }
+    }
+   
+</style>
+<body>
+    <div>
+        <h1> sFh </h1>
+      
+        <h1> Sign In</h1>
+        
+        <form> 
+           <article> 
+            <p> Username : <input id="name" required minlength="2"></p>
+           </article>
+            <article> 
+                <p> Password : <input id="password" type="password" required minlength="5"></p>
+            </article>
+           
+            <button> Sign In </button>
+        </form>
+    </div>
+</body>
+<script> 
+    let form = document.querySelector("form")
+    form.onsubmit = submitForm
+
+    function submitForm(e){
+        e.preventDefault()
+        let name = document.querySelector("#name").value
+        let password = document.querySelector("#password").value
+
+        signinUser(name, password)
+    }
+    function signinUser(name, password){
+        let users = JSON.parse(localStorage.getItem("users"))
+
+        if (!users.hasOwnProperty(name)){
+            alert("INVALID USER NAME")
+            return
+        }
+        let userData = users[name]
+        if (userData.password !== password){
+            alert("INVALID PASSWORD")
+            return
+        
+        }
+        sessionStorage.setItem("auth", name)
+        window.location.href="./sharonfashionhub.html"
+    }
+
+</script>
+</html>

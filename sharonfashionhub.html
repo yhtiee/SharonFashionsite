@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sFh - Offical Home Page</title>
+</head>
+<style>
+     *{
+            margin:0;
+            box-sizing: border-box;
+     }
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;   
+    }
+    header{
+        margin-top: 0;    
+    }
+    
+    
+    
+    .main1 {
+        display: flex;
+        flex: wrap;
+        justify-content: space-between;
+        /* overflow-x: hidden; */
+        box-shadow: 0px 0px 10px 0px rgb(210, 207, 207);
+        transition : 0.5s
+       
+    }
+    .main1:hover{
+        box-shadow: 0px 0px 15px 2px rgb(129, 126, 126);
+    }
+        
+    
+    .div2{
+        background-color: white;
+        color: black;
+        width: 50%;
+        padding: 80px 20px 0px 50px ;
+     
+        height: 600px;
+      
+    }
+  
+    .div3{
+        width: 50%;
+        height: 600px;
+      
+        
+    }
+    img{
+        height:100%;
+        object-fit: cover;
+        width:100%;
+    }
+    .art1{
+        margin-top: 120px;
+    }
+    .art2{
+        margin-top:10px;
+    }
+    .b1{
+        background-color: black;
+        color: white;
+        height: 35px;
+        font-weight: bolder;
+        margin-top: 10px;
+        border: 0px;
+        width: 40%;
+    }
+    .b1:hover{
+       background-color: rgba(0,0,0,0.7);
+    }
+    
+   .aside1{
+       padding: 10px 0px;
+       margin-left: 20px;
+   }   
+  
+    
+   
+ 
+    @media (max-width: 900px){
+        .main1{
+            display : flex;
+            flex-wrap: wrap;
+        }
+        .main1 > .div3{
+            width : 100%;
+            order : 1
+        }
+        .main1 > .div2{
+            width : 100%;
+            order : 2
+        }
+    }
+    
+    .topnav {
+  overflow: hidden;
+  background-color: white;
+  top: 0px;
+  position: sticky;
+  
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .more:hover {
+ background-color: black;
+ color: white;
+}
+
+.topnav .active {
+  background-color: black;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+.icon{
+    background-color: white;
+    border: 1px solid black;
+}
+    </style>
+   
+  
+   
+   <div class="topnav" id="myTopnav">
+       <style>
+           @media (min-width: 900px){
+            .topnav{
+               display: flex;
+               justify-content: space-between;
+           }
+           }
+       </style>
+    <div>
+        <a href="#home" class="active">sFh</a>
+        <a class="more" href="#contact">Contact</a>
+        <a class="more" href="./maleclothing.html">Male Clothing</a>
+        <a class="more" href="./femaleclothing.html">Female  Clothing</a>
+        
+        <a class="more" href="./childrenclothing.html">Children Clothing</a>
+    </div>
+    <div>
+        <a href="#"></a>
+        <a class="more" href="./signin.html">Sign in</a>
+        <a class="more" href="./signup.html">Sign up</a>
+    </div>
+    <a href="#" class="icon"> Menu
+    </a> 
+    <script>
+        let icon = document.querySelector(".icon")
+        icon.onclick = myFunction
+        function myFunction() {
+          var x = document.querySelector("#myTopnav");
+          x.classList.toggle('responsive')
+        }
+    </script>
+   </div>
+   <main class="main1"> 
+       <div class="div2"> 
+        <article class="art1"> 
+            <h1>Tie-Dye Wears</h1>
+        </article>
+        <article class="art2"> 
+            <p> Sharons Fashion Hub promotes the African culture with handmade tie dye fabrics crafted to perfection for you.</p>
+        </article>
+        <button class="b1"> 
+             Explore More > 
+        </button>
+       </div>
+       <div class="div3">
+           <img src="../pictures/IMG-20220416-WA0025.jpg">
+       </div>
+   </main>
+   <style> 
+     .main2 {
+        display : flex;
+        flex-wrap: wrap;
+        margin-left: 40px;
+        margin-right: 40px;
+        justify-content: space-between;
+        margin-top: 20px;
+
+     }
+     .main2 div {
+            width : 22%;
+            margin : 10px 0px;
+        }
+        .main2 > div > img {
+            display : block;
+            width : 100%;
+            height : 200px;
+            object-fit: cover;
+        }
+        .art4{
+            margin-top: 20px;
+        }
+        .art5{
+            margin-top: 10px; 
+        }
+        .anchortag{
+            margin-top: 10px;
+            width: 40%; 
+        }
+      .b3{
+        text-decoration: none;
+        color: rgb(43, 141, 233);
+        font-weight: bolder;
+        border: 0px;
+        background-color: white;
+        margin-top: 10px;
+        font-size: medium;
+        
+      }
+      .b3:hover{
+          border-bottom: 2px solid rgb(43, 141, 233) ;
+      }
+     
+      @media (max-width: 900px){
+            .main2 div{
+                width : 45%;
+            
+            }
+     
+            
+        }
+        @media (max-width: 700px){
+            .main2 div{
+                width : 100%;
+            
+            }
+            
+        }
+        .main2 > div{
+            padding: 10px;
+            transition: 0.8s;
+        }
+        .main2 > div:hover{
+            border-radius: 20px;
+            box-shadow: 0px 0px 12px 1px grey;
+        }
+    </style>
+   <main class="main2"> 
+    <div>
+        <img src="../pictures/better shirts.jpg">
+        <section>
+            <article class="art4"> <h2>Shirts</h2></article>
+            <article class="art5"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate debitis, quam dolor eos atque, quia ea illo aperiam itaque odio dolorem? .</p></article>
+            <button class="b3">Learn More ></button>
+        </section>
+    </div>
+    <div>
+        <img src="../pictures/caps.jpg">
+        <section>
+            <article class="art4"> <h2>Caps</h2></article>
+            <article class="art5"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate debitis, quam dolor eos atque, quia ea illo aperiam itaque odio dolorem? .</p></article>
+           <button class="b3">Learn More ></button>
+        </section>
+    </div>
+    <div>
+        <img src="../pictures/longsleve.jpg">
+        <section>
+            <article class="art4"> <h2>Longsleve Shirts </h2></article>
+            <article class="art5"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate debitis, quam dolor eos atque, quia ea illo aperiam itaque odio dolorem? .</p></article>
+            <button class="b3">Learn More ></button>
+        </section>
+    </div>
+    <div>
+        <img src="../pictures/croptops.jpg">
+        <section>
+            <article class="art4"> <h2> Crop Tops for Women</h2></article>
+            <article class="art5"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate debitis, quam dolor eos atque, quia ea illo aperiam itaque odio dolorem? .</p></article>
+            <button class="b3">Learn More ></button>
+        </section>
+    </div>
+   </main>
+   <style> 
+   
+    .main4{ 
+       
+        margin-top: 20px;
+        display:flex;
+        flex:wrap;
+        /* padding: 10px 0px; */
+        justify-content: space-between;
+        box-shadow: 0px 0px 10px 0px rgb(210, 207, 207);
+        transition : 0.5s
+       
+    }
+    .main4:hover{
+        box-shadow: 0px 0px 15px 2px rgb(129, 126, 126);
+    }
+    .div6{
+        background-color: white;
+        color: black;
+        width: 50%;
+        padding: 80px 20px 0px 50px ;
+        /* border: 1px solid rgb(245, 243, 243);
+         */
+         
+        height: 600px;
+      
+    }
+    .div7{
+        height:600px;
+        width: 50%;
+    }
+    .div7 > img{
+        object-fit: cover;
+        display: block;
+        width:100%;
+    }
+    
+    .art6{
+        margin-top: 120px;
+    }
+    .art7{
+        margin-top:10px;
+    }
+ 
+  
+    
+    
+    .b2{
+        margin-top:10px ;
+        background-color: black;
+        color: white;
+        height: 35px;
+        font-weight: bolder;
+        border: 0px;
+        width:30%;
+        
+    }
+    .b2:hover{
+       background-color: rgba(0,0,0,0.7);
+    }
+    
+    
+    @media (max-width: 900px){
+        .main4{
+            display : flex;
+            flex-wrap: wrap;
+        }
+        .main4 > .div7{
+            width : 100%;
+            order : 1
+        }
+        .main4 > .div6{
+            width : 100%;
+            order : 2
+     
+        }
+    }        
+  
+  
+</style>
+  <main class="main4"> 
+    <div class="div6">  
+         <article class="art6"> 
+             <h1>Revamp Your old/Faded Clothes</h1>
+         </article>
+         <article class="art7"> 
+             <p> Sharons Fashion Hub also revaps your old clothings, making your clothes that where faded more colourfulful and ready to be reused.</p>
+         </article>
+         <button class="b2"> 
+             <article class="artb1"> Apply Now ></article>
+         </button>
+        </div> 
+    <div class="div7"> <img src="../pictures/shirts.jpg"> </div>
+   </main>
+
+ 
+ 
+</body>
+</html>
